@@ -1,0 +1,6 @@
+openbox/actions/openbox-all.o: openbox/actions/all.c \
+ /usr/include/stdc-predef.h openbox/actions/all.h
+
+/usr/include/stdc-predef.h:
+
+openbox/actions/all.h:
