@@ -517,7 +517,7 @@ static void signal_handler(gint signal, gpointer data)
 
 static void print_version(void)
 {
-    g_print("Openbox %s\n", PACKAGE_VERSION);
+    g_print("Openbox %s-rounded\n", PACKAGE_VERSION);
     g_print(_("Copyright (c)"));
     g_print(" 2004   Mikael Magnusson\n");
     g_print(_("Copyright (c)"));

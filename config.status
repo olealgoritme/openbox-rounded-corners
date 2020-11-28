@@ -431,11 +431,11 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/xuw/src/openbox-3.6.0-rounded-corners'
+ac_pwd='/home/xuw/src/openbox-rounded-corners'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
-AWK='mawk'
+AWK='gawk'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
 ac_need_defaults=:
@@ -661,8 +661,8 @@ postuninstall_cmds=''
 finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
 finish_eval=''
 hardcode_into_libs='yes'
-sys_lib_search_path_spec='/usr/lib/gcc/x86_64-linux-gnu/9 /usr/lib/x86_64-linux-gnu /usr/lib /lib/x86_64-linux-gnu /lib '
-configure_time_dlsearch_path='/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib/i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/local/lib/i686-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 '
+sys_lib_search_path_spec='/usr/lib/gcc/x86_64-linux-gnu/10 /usr/lib/x86_64-linux-gnu /usr/lib /lib/x86_64-linux-gnu /lib '
+configure_time_dlsearch_path='/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib/i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/local/lib/i686-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 /libx32 /usr/libx32 '
 configure_time_lt_sys_library_path=''
 hardcode_action='immediate'
 enable_dlopen='unknown'
@@ -855,8 +855,9 @@ S["LIBSN_CFLAGS"]="-I/usr/include/startup-notification-1.0"
 S["XML_LIBS"]="-lxml2"
 S["XML_CFLAGS"]="-I/usr/include/libxml2"
 S["PANGO_LIBS"]="-lpangoxft-1.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype -lXft"
-S["PANGO_CFLAGS"]="-I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/"\
-"lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16"
+S["PANGO_CFLAGS"]="-pthread -I/usr/include/pango-1.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -"\
+"I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/incl"\
+"ude/libpng16"
 S["GLIB_LIBS"]="-lglib-2.0"
 S["GLIB_CFLAGS"]="-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include"
 S["PKG_CONFIG_LIBDIR"]=""
@@ -958,17 +959,17 @@ S["am__tar"]="$${TAR-tar} chof - \"$$tardir\""
 S["AMTAR"]="$${TAR-tar}"
 S["am__leading_dot"]="."
 S["SET_MAKE"]=""
-S["AWK"]="mawk"
+S["AWK"]="gawk"
 S["mkdir_p"]="/usr/bin/mkdir -p"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="strip"
-S["install_sh"]="${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/install-sh"
-S["MAKEINFO"]="${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/missing makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/missing autoheader"
-S["AUTOMAKE"]="${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/missing automake-1.16"
-S["AUTOCONF"]="${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/missing autoconf"
-S["ACLOCAL"]="${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/missing aclocal-1.16"
+S["install_sh"]="${SHELL} /home/xuw/src/openbox-rounded-corners/install-sh"
+S["MAKEINFO"]="${SHELL} /home/xuw/src/openbox-rounded-corners/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/xuw/src/openbox-rounded-corners/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /home/xuw/src/openbox-rounded-corners/missing automake-1.16"
+S["AUTOCONF"]="${SHELL} /home/xuw/src/openbox-rounded-corners/missing autoconf"
+S["ACLOCAL"]="${SHELL} /home/xuw/src/openbox-rounded-corners/missing aclocal-1.16"
 S["VERSION"]="3.6"
 S["PACKAGE"]="openbox"
 S["CYGPATH_W"]="echo"
@@ -1370,7 +1371,9 @@ $as_echo X/"$am_mf" |
     { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "Something went wrong bootstrapping makefile fragments
-    for automatic dependency tracking.  Try re-running configure with the
+    for automatic dependency tracking.  If GNU make was not used, consider
+    re-running the configure script with MAKE=\"gmake\" (or whatever is
+    necessary).  You can also try re-running configure with the
     '--disable-dependency-tracking' option to at least be able to build
     the package (albeit without support for automatic dependency tracking).
 See \`config.log' for more details" "$LINENO" 5; }

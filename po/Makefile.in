@@ -30,7 +30,7 @@ gettextsrcdir = $(datadir)/gettext/po
 
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
-mkinstalldirs = $(SHELL) ${SHELL} /home/xuw/src/openbox-3.6.0-rounded-corners/install-sh -d
+mkinstalldirs = $(SHELL) ${SHELL} /home/xuw/src/openbox-rounded-corners/install-sh -d
 mkdir_p = /usr/bin/mkdir -p
 
 GMSGFMT_ = /usr/bin/msgfmt
